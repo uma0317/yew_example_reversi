@@ -57,12 +57,14 @@ where
 {
     fn view(&self) -> Html<CTX, Self> {
         html! {
-            <div class="stone",>
+            <div class="stone", onclick=|_| Msg::Reverse, >
             {
                 if self.state == State::Flont {
                     "●"
-                } else {
+                } else if self.state == State::Back {
                     "○"
+                } else {
+                    ""
                 }
             }
             </div>

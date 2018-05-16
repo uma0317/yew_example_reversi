@@ -36,7 +36,7 @@ where
 {
     html! {
         <td>
-            <Stone: state=State::None,/>
+            <Stone: state=State::Back,/>
         </td>
     }
 }
@@ -59,7 +59,7 @@ where
 {
     fn view(&self) -> Html<CTX, Self> {
         html! {
-            <table>
+            <table border="1", cellpadding="10",>
                 {for (0..3).map(|_| {
                     view_row()
                 })}
